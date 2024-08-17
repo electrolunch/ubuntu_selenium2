@@ -65,6 +65,7 @@ chrome_options = webdriver.ChromeOptions()
 # if headless:
 chrome_options.binary_location = browser_path
 chrome_options.add_argument("--headless")
+chrome_options.add_argument("--no-sandbox")
 # chrome_options.add_argument("--verbose")
 # chrome_options.add_argument("--log-path=cd.log")
 # logging.basicConfig(level=logging.DEBUG)
