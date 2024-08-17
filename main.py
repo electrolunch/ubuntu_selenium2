@@ -114,7 +114,7 @@ def make_screenshot(driver,tail=""):
 print("Screenshot started")
 make_screenshot(driver,tail="")
 print("Screenshot ended")
-# time.sleep(100)
+time.sleep(10)
 driver.quit()
 # page_sourse=driver.page_source
 
