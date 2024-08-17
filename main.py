@@ -20,7 +20,7 @@ import logging
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from datetime import datetime
-
+import time
 
 # Create a logger
 logger = logging.getLogger(__name__)
@@ -63,7 +63,7 @@ chrome_options = webdriver.ChromeOptions()
 # chrome_options.add_argument(r'--profile-directory=Profile 2')
 # chrome_options.add_argument("--incognito")
 # if headless:
-# chrome_options.binary_location = browser_path
+chrome_options.binary_location = browser_path
 chrome_options.add_argument("--headless")
 # chrome_options.add_argument("--verbose")
 # chrome_options.add_argument("--log-path=cd.log")
@@ -114,6 +114,7 @@ def make_screenshot(driver,tail=""):
 print("Screenshot started")
 make_screenshot(driver,tail="")
 print("Screenshot ended")
+time.sleep(100)
 driver.quit()
 # page_sourse=driver.page_source
 
