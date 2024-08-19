@@ -48,11 +48,11 @@ logger.addHandler(console_handler)
 # config.read(r"D:\PProjects\libs\parsing\config.ini")
 # from tenacity import retry, stop_after_attempt, wait_fixed
 
-# service_path = r"D:\PProjects\Parsing\chromedriver-win64\chromedriver.exe"
-# browser_path = r"D:\chr\chrome.exe"
+service_path = r"D:\PProjects\Parsing\chromedriver-win64\chromedriver.exe"
+browser_path = r"D:\chr\chrome.exe"
 
-service_path = r"./chromedriver-linux64/chromedriver"
-browser_path = r"./chrome-linux64/chrome"
+# service_path = r"./chromedriver-linux64/chromedriver"
+# browser_path = r"./chrome-linux64/chrome"
 service = Service(executable_path=service_path,service_args=["--verbose", "--log-path=cd.log"])
 chrome_options = webdriver.ChromeOptions()
 
@@ -67,6 +67,8 @@ chrome_options.binary_location = browser_path
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
+# chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+# chrome_options.add_experimental_option('useAutomationExtension', False)
 # chrome_options.add_argument("--disable-gpu")
 # chrome_options.add_argument("--disable-extensions")
 # chrome_options.add_argument("disable-infobars")
